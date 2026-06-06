@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
 @theme {
-  /* No v4, você referencia outras cores usando var() nativo do CSS */
-  --color-primary: var(--color-red-500);
-  --color-secondary: var(--color-blue-500);
-  --color-tertiary: var(--color-green-500);
+  
 }
