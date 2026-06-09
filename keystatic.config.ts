@@ -1,20 +1,26 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection } from "@keystatic/core";
 
 export default config({
-  storage: {
-    kind: 'local',
-  },
+  storage:
+    process.env.NODE_ENV === "production"
+      ? {
+          kind: "github",
+          repo: "/liara-ifpi/liara",
+        }
+      : {
+          kind: "local",
+        },
   collections: {
     posts: collection({
-      label: 'Posts',
-      slugField: 'title',
-      path: 'src/content/posts/*',
+      label: "Posts",
+      slugField: "title",
+      path: "src/content/posts/*",
       format: { data: "json" },
       schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
-        description: fields.text({ label: 'Description' }),
-        link: fields.url({ label: 'Link' }),
-        date: fields.date({ label: 'Date' }),
+        title: fields.slug({ name: { label: "Title" } }),
+        description: fields.text({ label: "Description" }),
+        link: fields.url({ label: "Link" }),
+        date: fields.date({ label: "Date" }),
       },
     }),
   },
