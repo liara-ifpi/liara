@@ -9,19 +9,12 @@ export default config({
       label: 'Posts',
       slugField: 'title',
       path: 'src/content/posts/*',
-      format: { contentField: 'content' },
+      format: { data: "json" },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
         description: fields.text({ label: 'Description' }),
-        content: fields.markdoc({
-          label: 'Content',
-          options: {
-            image: {
-              directory: 'src/assets/images/posts',
-              publicPath: '../../assets/images/posts/',
-            },
-          },
-        }),
+        link: fields.url({ label: 'Link' }),
+        date: fields.date({ label: 'Date' }),
       },
     }),
   },
