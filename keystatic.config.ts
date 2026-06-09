@@ -5,7 +5,7 @@ export default config({
     process.env.NODE_ENV === "production"
       ? {
           kind: "github",
-          repo: "/liara-ifpi/liara",
+          repo: "liara-ifpi/liara",
         }
       : {
           kind: "local",
