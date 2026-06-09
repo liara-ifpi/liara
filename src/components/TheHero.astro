@@ -1,0 +1,16 @@
+---
+const { title, subtitle } = Astro.props;
+---
+
+<section
+  class="bg-linear-to-r from-dark-navy via-primary-blue to-secondary-blue flex flex-col min-h-[35vh] items-center justify-center text-white px-4 py-10"
+>
+  <h1
+    class="text-3xl md:text-[2.5rem] font-bold text-center max-w-5xl leading-tight"
+  >
+    {title}
+  </h1>
+  <p class="text-base md:text-[1.25rem] mt-4 md:mt-2 text-center max-w-3xl">
+    {subtitle}
+  </p>
+</section>

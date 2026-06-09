@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 @theme {
-  
+    --color-dark-navy: #0d1f35;
+    --color-primary-blue: #1a3a5c;
+    --color-secondary-blue: #2c5f8d;
+    --color-light-blue: #4a90c5;
+    --color-light-gray: #f2f2f2;
+    --color-medium-gray: #666;
+    --color-white: #ffffff;
 }

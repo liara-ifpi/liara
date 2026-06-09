@@ -1,23 +1,41 @@
+---
+import "../styles/global.css";
+import TheHeader from "../components/TheHeader.astro";
+import TheFooter from "../components/TheFooter.astro";
+import { ClientRouter } from "astro:transitions";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      LIARA - Laboratório de Inteligência Artificial, Robótica e Automação
+    </title>
+    <ClientRouter />
+  </head>
+
+  <body
+    class="min-h-screen flex flex-col font-['Segoe UI', Tahoma, Geneva, Verdana, sans-serif, times-new-roman] overflow-x-hidden text-slate-900 bg-slate-50"
+  >
+    <TheHeader />
+
+    <main class="grow" transition:animate="initial">
+      <slot />
+    </main>
+
+    <TheFooter />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+  }
 </style>
