@@ -12,7 +12,7 @@ O site utiliza uma abordagem "headless" para o gerenciamento de conteúdo, onde 
 
 Para publicar um novo artigo ou post no site, siga os passos abaixo:
 
-1.  **Crie um novo arquivo JSON** no diretório `/home/gabrii3l/Coding/Liara/liara-home/src/content/posts/`. O nome do arquivo deve ser descritivo e seguir um padrão consistente (ex: `Nome-do-Artigo.json`).
+1.  **Crie um novo arquivo JSON** no diretório `/src/content/posts/`. O nome do arquivo deve ser descritivo e seguir um padrão consistente (ex: `Nome-do-Artigo.json`).
 
 2.  **Preencha o arquivo JSON** com as informações do artigo, seguindo a estrutura abaixo:
 
